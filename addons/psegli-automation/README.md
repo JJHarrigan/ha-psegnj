@@ -1,6 +1,6 @@
-# PSEG Long Island Automation Addon
+# PSEG New Jersey Automation Addon
 
-This Home Assistant addon provides automated login services for PSEG Long Island using Playwright. It runs in its own container and exposes a web API for cookie generation.
+This Home Assistant addon provides automated login services for PSEG New Jersey using Playwright. It runs in its own container and exposes a web API for cookie generation.
 
 **Version**: 2.4.5
 
@@ -10,7 +10,7 @@ This Home Assistant addon provides automated login services for PSEG Long Island
 - 🔐 **Cookie Generation**: Returns fresh authentication cookies
 - 🌐 **Web API**: Simple HTTP endpoints for integration use
 - 🐳 **Docker-based**: Runs in isolated container with all dependencies
-- 📱 **Home Assistant Integration**: Works seamlessly with PSEG Long Island integration
+- 📱 **Home Assistant Integration**: Works seamlessly with PSEG New Jersey integration
 
 ## Installation
 
@@ -24,7 +24,7 @@ This Home Assistant addon provides automated login services for PSEG Long Island
    - Click **Add**
 
 2. **Install the addon:**
-   - Find **PSEG Long Island Automation** in the store
+   - Find **PSEG New Jersey Automation** in the store
    - Click **Install**
    - Wait for installation to complete
    - Click **Start**
@@ -79,11 +79,11 @@ username=your_email@example.com&password=your_password
 
 ## Integration Usage
 
-The PSEG Long Island integration will automatically use this addon when available. No additional configuration needed.
+The PSEG New Jersey integration will automatically use this addon when available. No additional configuration needed.
 
 ## Multi-Factor Authentication (MFA)
 
-PSEG Long Island added MFA in late 2024/early 2025. When MFA is required:
+PSEG New Jersey added MFA in late 2024/early 2025. When MFA is required:
 
 1. **POST /login** with username and password - the addon will return `mfa_required: true`
 2. Check your email or phone for the verification code (sent by PSEG)

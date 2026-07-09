@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""PSEG Long Island Automation Addon - FastAPI Server"""
+"""PSEG New Jersey Automation Addon - FastAPI Server"""
 
 import asyncio
 import logging
@@ -19,7 +19,7 @@ from auto_login import get_fresh_cookies, PSEGAutoLogin
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-app = FastAPI(title="PSEG Long Island Automation", version="1.0.0")
+app = FastAPI(title="PSEG New Jersey Automation", version="1.0.0")
 
 if HEADED:
     logger.info("HEADED mode enabled - browser window will be visible for MFA debugging")

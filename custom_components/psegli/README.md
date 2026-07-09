@@ -1,6 +1,6 @@
-# PSEG Long Island Integration
+# PSEG New Jersey Integration
 
-A Home Assistant integration for monitoring energy usage from PSEG Long Island's Smart Energy program.
+A Home Assistant integration for monitoring energy usage from PSEG New Jersey's Smart Energy program.
 
 ## Features
 
@@ -17,10 +17,10 @@ A Home Assistant integration for monitoring energy usage from PSEG Long Island's
 
 1. Install HACS if you haven't already
 2. Add this repository as a custom repository in HACS
-3. Install the "PSEG Long Island" integration
+3. Install the "PSEG New Jersey" integration
 4. Restart Home Assistant
 5. Go to **Settings** > **Devices & Services** > **Integrations**
-6. Click **+ Add Integration** and search for "PSEG Long Island"
+6. Click **+ Add Integration** and search for "PSEG New Jersey"
 
 ### Method 2: Manual Installation
 
@@ -28,17 +28,17 @@ A Home Assistant integration for monitoring energy usage from PSEG Long Island's
 2. Copy the `psegli` folder to your `custom_components` directory
 3. Restart Home Assistant
 4. Go to **Settings** > **Devices & Services** > **Integrations**
-5. Click **+ Add Integration** and search for "PSEG Long Island"
+5. Click **+ Add Integration** and search for "PSEG New Jersey"
 
 ## Configuration
 
 ### Initial Setup
 
 1. **Add Integration**: Go to **Settings** > **Devices & Services** > **Integrations** and click **+ Add Integration**
-2. **Search for PSEG**: Search for "PSEG Long Island" and select it
+2. **Search for PSEG**: Search for "PSEG New Jersey" and select it
 3. **Enter Credentials**:
-   - **Username**: Your PSEG Long Island account username/email
-   - **Password**: Your PSEG Long Island account password
+   - **Username**: Your PSEG New Jersey account username/email
+   - **Password**: Your PSEG New Jersey account password
    - **Cookie** (Optional): If you have a valid cookie, you can enter it directly. If left empty, the integration will attempt to get one from the automation addon if available.
 
 ### Cookie Management
@@ -46,14 +46,14 @@ A Home Assistant integration for monitoring energy usage from PSEG Long Island's
 The integration stores your authentication cookie and will use it for all API requests. When the cookie expires:
 
 1. **Automatic Refresh**: If the automation addon is available and healthy, the integration will automatically attempt to get a new cookie
-2. **Manual Update**: You can manually update the cookie by going to **Settings** > **Devices & Services** > **PSEG Long Island** > **Configure**
+2. **Manual Update**: You can manually update the cookie by going to **Settings** > **Devices & Services** > **PSEG New Jersey** > **Configure**
 3. **Direct Cookie Input**: You can manually obtain a cookie from your browser and enter it directly
 
 ### Options Flow
 
 To update your configuration:
 
-1. Go to **Settings** > **Devices & Services** > **PSEG Long Island**
+1. Go to **Settings** > **Devices & Services** > **PSEG New Jersey**
 2. Click **Configure**
 3. **Update Cookie**: Enter a new cookie directly, or leave empty to attempt automatic refresh via addon
 4. Click **Submit**
@@ -95,7 +95,7 @@ No parameters required.
 service: psegli.refresh_cookie
 ```
 
-**Note:** This service requires the PSEG Long Island Automation Addon to be installed and running. If the addon is not available, you'll need to manually update your cookie in the integration settings.
+**Note:** This service requires the PSEG New Jersey Automation Addon to be installed and running. If the addon is not available, you'll need to manually update your cookie in the integration settings.
 
 ## Data Structure
 
@@ -113,7 +113,7 @@ The integration provides the following data:
 1. **Authentication Failed**
 
    - Your cookie has expired
-   - Go to **Settings** > **Devices & Services** > **PSEG Long Island** > **Configure**
+   - Go to **Settings** > **Devices & Services** > **PSEG New Jersey** > **Configure**
    - Update your cookie or let the integration attempt automatic refresh
 
 2. **No Data Available**
@@ -138,7 +138,7 @@ logger:
 
 ## Automation Addon
 
-This integration can optionally work with the PSEG Long Island Automation Addon to automatically refresh expired cookies. The addon is not required for the integration to function, but it provides:
+This integration can optionally work with the PSEG New Jersey Automation Addon to automatically refresh expired cookies. The addon is not required for the integration to function, but it provides:
 
 - **Automatic Cookie Refresh**: Automatically obtains new cookies when they expire
 - **Headless Operation**: No need to manually extract cookies from your browser
@@ -146,7 +146,7 @@ This integration can optionally work with the PSEG Long Island Automation Addon 
 
 ### Addon Setup
 
-1. Install the PSEG Long Island Automation Addon from the addon store
+1. Install the PSEG New Jersey Automation Addon from the addon store
 2. Configure the addon with your credentials
 3. Start the addon
 4. The integration will automatically detect and use the addon when available
